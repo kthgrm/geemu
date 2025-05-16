@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+  <game id="1">
+    <title>Elden Ring</title>
+    <price>2999</price>
+    <image>elden-ring.jpg</image>
+    <description>Explore a vast world full of danger, magic, and lore.</description>
+    <quantity>150</quantity>
+    <tag>Action,RPG,Open World</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="2">
+    <title>God of War Ragnarok</title>
+    <price>3499</price>
+    <image>god-of-war-ragnarok.jpg</image>
+    <description>Join Kratos and Atreus in an epic Norse adventure.</description>
+    <quantity>120</quantity>
+    <tag>Action,Adventure,Story-Driven</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="3">
+    <title>Cyberpunk 2077</title>
+    <price>2599</price>
+    <image>cyberpunk.jpg</image>
+    <description>Experience an open-world RPG set in a futuristic city.</description>
+    <quantity>80</quantity>
+    <tag>RPG,Action,Open World</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="4">
+    <title>The Witcher 3: Wild Hunt</title>
+    <price>1999</price>
+    <image>witcher3.jpg</image>
+    <description>Play as Geralt and hunt monsters in a rich fantasy world.</description>
+    <quantity>200</quantity>
+    <tag>RPG,Action,Fantasy</tag>
+    <category>PlayStation 4</category>
+  </game>
+  <game id="5">
+    <title>Horizon Forbidden West</title>
+    <price>2999</price>
+    <image>horizon.jpg</image>
+    <description>Join Aloy in a post-apocalyptic world full of machines.</description>
+    <quantity>95</quantity>
+    <tag>Action,RPG,Adventure</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="6">
+    <title>Red Dead Redemption 2</title>
+    <price>3199</price>
+    <image>rdr2.jpg</image>
+    <description>Live the life of an outlaw in a stunning Wild West world.</description>
+    <quantity>110</quantity>
+    <tag>Action,Open World,Adventure</tag>
+    <category>PlayStation 4</category>
+  </game>
+  <game id="7">
+    <title>Resident Evil 4 Remake</title>
+    <price>2899</price>
+    <image>re4.jpg</image>
+    <description>Survive the horror in this beautifully remade classic.</description>
+    <quantity>75</quantity>
+    <tag>Action,Horror,Remake</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="8">
+    <title>Final Fantasy VII Remake</title>
+    <price>3199</price>
+    <image>ff7.jpg</image>
+    <description>Revisit Midgar in a reimagined action-packed RPG.</description>
+    <quantity>90</quantity>
+    <tag>RPG,Action,Remake</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="9">
+    <title>Assassin’s Creed Valhalla</title>
+    <price>2699</price>
+    <image>valhalla.jpg</image>
+    <description>Lead your Viking clan to glory across England.</description>
+    <quantity>130</quantity>
+    <tag>Action,RPG,Open World</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="10">
+    <title>Grand Theft Auto V</title>
+    <price>2399</price>
+    <image>gta5.jpg</image>
+    <description>Experience action and crime in Los Santos.</description>
+    <quantity>160</quantity>
+    <tag>Action,Open World,Crime</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="11">
+    <title>FIFA 23</title>
+    <price>2599</price>
+    <image>fifa23.jpg</image>
+    <description>Play with the world's best teams in this football simulation.</description>
+    <quantity>180</quantity>
+    <tag>Sports,Simulation</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="12">
+    <title>NBA 2K24</title>
+    <price>2699</price>
+    <image>nba2k24.jpg</image>
+    <description>Build your legacy on the court with your favorite players.</description>
+    <quantity>150</quantity>
+    <tag>Sports,Basketball,Simulation</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="13">
+    <title>Tekken 8</title>
+    <price>2899</price>
+    <image>tekken8.jpg</image>
+    <description>Fight your way through intense martial arts battles.</description>
+    <quantity>100</quantity>
+    <tag>Fighting,Action</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="14">
+    <title>Street Fighter 6</title>
+    <price>2899</price>
+    <image>sf6.jpg</image>
+    <description>Challenge players worldwide in legendary combat.</description>
+    <quantity>120</quantity>
+    <tag>Fighting,Action</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="15">
+    <title>Dark Souls III</title>
+    <price>1999</price>
+    <image>ds3.jpg</image>
+    <description>Embrace the darkness in this punishing action RPG.</description>
+    <quantity>85</quantity>
+    <tag>Action,RPG,Dark Fantasy</tag>
+    <category>PlayStation 4</category>
+  </game>
+  <game id="16">
+    <title>Spider-Man: Miles Morales</title>
+    <price>2999</price>
+    <image>spiderman.jpg</image>
+    <description>Swing through NYC as the new Spider-Man, Miles Morales.</description>
+    <quantity>140</quantity>
+    <tag>Action,Adventure,Superhero</tag>
+    <category>PlayStation 5</category>
+  </game>
+  <game id="17">
+    <title>Hogwarts Legacy</title>
+    <price>3299</price>
+    <image>hogwarts.jpg</image>
+    <description>Discover your magical destiny in the wizarding world.</description>
+    <quantity>110</quantity>
+    <tag>Action,RPG,Fantasy</tag>
+    <category>PlayStation 5</category>
+  </game>
+  
+</games>

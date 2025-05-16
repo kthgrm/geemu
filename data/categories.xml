@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+    <category id="1">
+        <name>PlayStation 4</name>
+        <description>Sony's fourth-generation home video game console.</description>
+    </category>
+    <category id="2">
+        <name>PlayStation 5</name>
+        <description>Sony's fifth-generation home video game console.</description>
+    </category>
+    <category id="3">
+        <name>Xbox One</name>
+        <description>Microsoft's third-generation home video game console.</description>
+    </category>
+    <category id="4">
+        <name>Xbox Series X</name>
+        <description>Microsoft's fourth-generation home video game console.</description>
+    </category>
+    <category id="5">
+        <name>Nintendo Switch</name>
+        <description>Nintendo's hybrid home and handheld video game console.</description>
+    </category>
+</categories>
