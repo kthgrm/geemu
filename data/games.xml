@@ -7,7 +7,7 @@
     <description>Explore a vast world full of danger, magic, and lore.</description>
     <quantity>150</quantity>
     <tag>Action,RPG,Open World</tag>
-    <category>PlayStation 5</category>
+    <category>PlayStation 4</category>
   </game>
   <game id="2">
     <title>God of War Ragnarok</title>
@@ -153,5 +153,4 @@
     <tag>Action,RPG,Fantasy</tag>
     <category>PlayStation 5</category>
   </game>
-  
 </games>

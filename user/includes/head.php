@@ -3,6 +3,9 @@
 require '../config/function.php';
 include 'includes/auth.php';
 
+if (isset($_POST['logout'])) {
+    logoutSession();
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +23,19 @@ include 'includes/auth.php';
         }
         ?>
     </title>
-    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo getenv('RECAPTCHA_SECRET_KEY'); ?>"></script>
+
+    <link href="https://cdn.datatables.net/2.3.0/css/dataTables.bootstrap5.min.css" rel="stylesheet" integrity="sha384-xkQqWcEusZ1bIXoKJoItkNbJJ1LG5QwR5InghOwFLsCoEkGcNLYjE0O83wWruaK9" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/39d16eda1c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <?php
+    include 'includes/navbar.php';
+    ?>
+    <main class="col-md-12 col-lg-12 ms-sm-auto px-md-4 pt-4">

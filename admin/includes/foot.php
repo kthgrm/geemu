@@ -10,7 +10,7 @@
 <script>
     $('#myTable').DataTable();
 </script>
-
+</main>
 </body>
 
 </html>
