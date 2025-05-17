@@ -49,6 +49,7 @@ include 'includes/head.php';
                 $start = ($page - 1) * $gamesPerPage;
                 $end = $start + $gamesPerPage;
 
+                $filteredGames = [];
                 foreach ($games as $game) {
                     $id = $game->getAttribute('id');
                     $title = $game->getElementsByTagName('title')[0]->nodeValue;
@@ -95,7 +96,7 @@ include 'includes/head.php';
                                         <h5 class="card-title mb-1"><?php echo htmlspecialchars($game['title']); ?></h5>
                                         <span class="fw-bold">₱<?php echo number_format((float)$game['price'], 2); ?></span>
                                         <div class="mt-auto d-flex justify-content-end align-items-center gap-1">
-                                            <a href="cart-add.php?id=<?php echo urlencode($game['id']); ?>" class="btn btn-danger btn-sm">Add to Cart <i class="fa-solid fa-cart-plus"></i></a>
+                                            <a href="cart-add.php?id=<?php echo urlencode($game['id']); ?>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -128,3 +129,5 @@ include 'includes/head.php';
             <?php endif; ?>
         </div>
     </div>
+
+    <?php include 'includes/foot.php'; ?>

@@ -109,3 +109,5 @@ if (isset($_GET['id'])) {
     echo '<div class="alert alert-warning mt-5 container">No game ID specified.</div>';
 }
 ?>
+
+<?php include 'includes/foot.php'; ?>
