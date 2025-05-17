@@ -1,8 +1,9 @@
 <?php
 include 'includes/head.php';
 
-// Get the game ID from the URL
-$gameId = isset($_GET['id']) ? htmlspecialchars($_GET['id']) : '';
+// Get the game ID and quantity from POST
+$gameId = isset($_POST['game_id']) ? htmlspecialchars($_POST['game_id']) : '';
+$quantityToAdd = isset($_POST['quantity']) ? max(1, intval($_POST['quantity'])) : 1;
 $id = isset($_SESSION['user']['userId']) ? $_SESSION['user']['userId'] : null;
 
 $xml = new DOMDocument();
@@ -20,7 +21,7 @@ foreach ($carts as $cart) {
             if ($cartGameId == $gameId) {
                 // Game already in cart, increase quantity
                 $quantity = $cartItem->getAttribute('quantity');
-                $newQuantity = $quantity ? intval($quantity) + 1 : 2;
+                $newQuantity = $quantity ? intval($quantity) + $quantityToAdd : $quantityToAdd;
                 $cartItem->setAttribute('quantity', $newQuantity);
                 $xml->save('../data/carts.xml');
                 echo "<script>alert('Added to cart successfully!'); window.location.href='shop.php';</script>";
@@ -30,7 +31,7 @@ foreach ($carts as $cart) {
         // Game not in cart, add new item
         $newItem = $xml->createElement('item');
         $newItem->setAttribute('gameId', $gameId);
-        $newItem->setAttribute('quantity', 1);
+        $newItem->setAttribute('quantity', $quantityToAdd);
         $items = $cart->getElementsByTagName('items')[0];
         $items->appendChild($newItem);
         $xml->save('../data/carts.xml');
@@ -47,7 +48,7 @@ if (!$cartFound && $id !== null && $gameId !== '') {
     $items = $xml->createElement('items');
     $newItem = $xml->createElement('item');
     $newItem->setAttribute('gameId', $gameId);
-    $newItem->setAttribute('quantity', 1);
+    $newItem->setAttribute('quantity', $quantityToAdd);
 
     $items->appendChild($newItem);
     $newCart->appendChild($items);

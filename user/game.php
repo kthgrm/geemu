@@ -54,10 +54,23 @@ if (isset($_GET['id'])) {
                         </div>
                         <form class="d-flex align-items-center mb-3" style="max-width:200px;">
                             <label for="quantity" class="me-2 mb-0"><strong>Quantity</strong></label>
-                            <input type="number" id="quantity" name="quantity" class="form-control me-2" value="1" min="1" max="<?php echo (int)$quantity; ?>" style="width:70px;">
+                            <input type="number" id="quantity" name="quantity" class="form-control me-2" value="1" min="1" max="<?php echo (int)$quantity; ?>" style="width:70px;"
+                                oninput="if (this.value < 1) this.value = 1; if (this.value > <?php echo (int)$quantity; ?>) this.value = <?php echo (int)$quantity; ?>;">
                         </form>
                         <div class="d-flex gap-2 mb-3">
-                            <button class="btn btn-warning fw-bold px-4" type="button"><i class="fa-solid fa-cart-plus me-2"></i>Add to cart</button>
+                            <form action="cart-add.php" method="post" class="d-inline">
+                                <input type="hidden" name="game_id" value="<?php echo htmlspecialchars($gameId); ?>">
+                                <input type="hidden" name="quantity" id="formQuantity" value="1">
+                                <button class="btn btn-warning fw-bold px-4" type="submit">
+                                    <i class="fa-solid fa-cart-plus me-2"></i>Add to cart
+                                </button>
+                            </form>
+                            <script>
+                                // Syncs the quantity input with the form's hidden input
+                                document.getElementById('quantity').addEventListener('input', function() {
+                                    document.getElementById('formQuantity').value = this.value;
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -83,7 +96,7 @@ if (isset($_GET['id'])) {
         }
         if (!empty($relatedGames)): ?>
             <div class="container my-5">
-                <h4 class="mb-4">Related Games</h4>
+                <h4 class="mb-4">You Might Also Like in <?php echo htmlspecialchars($category); ?> Games</h4>
                 <div class="row g-4">
                     <?php foreach ($relatedGames as $rel): ?>
                         <div class="col-6 col-md-3">

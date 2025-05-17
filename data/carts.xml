@@ -1,12 +1,8 @@
 <?xml version="1.0"?>
 <carts>
-    <cart userId="14">
-        <items>
-        </items>
-    </cart>
     <cart userId="6">
         <items>
             
         </items>
     </cart>
-</carts>
+<cart userId="14"><items/></cart></carts>

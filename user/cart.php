@@ -153,16 +153,10 @@ if (isset($_POST['remove_game_id'])) {
                             </span>
                         </span>
                     </div>
-
-                    <div class="d-flex gap-2 mb-3">
-                        <button class="btn btn-outline-secondary flex-fill py-2" type="button">
-                            <i class="fa fa-truck fa-lg me-2"></i>Local Delivery
-                        </button>
-                        <button class="btn btn-outline-secondary flex-fill py-2" type="button">
-                            <i class="fa fa-store fa-lg me-2"></i>Store Pickup
-                        </button>
-                    </div>
-                    <button class="btn btn-warning w-100 fw-bold py-2 fs-5" type="button">Proceed to Checkout</button>
+                    <form method="post" action="checkout.php">
+                        <input type="hidden" name="cartTotal" value="<?php echo htmlspecialchars($cartTotal); ?>">
+                        <button class="btn btn-warning w-100 fw-bold py-2 fs-5" name="btnCheckout" type="submit">Proceed to Checkout</button>
+                    </form>
                 </div>
             </div>
         </div>

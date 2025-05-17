@@ -82,7 +82,7 @@ include 'includes/head.php';
                     <div class="card-body py-4">
                         <div class="row g-3">
                             <div class="col-md-6 d-grid">
-                                <a href="view_payments.php" class="btn btn-m btn-danger">
+                                <a href="payments.php" class="btn btn-m btn-danger">
                                     <i class="fa-solid fa-file-invoice-dollar"></i> View Payments
                                 </a>
                             </div>

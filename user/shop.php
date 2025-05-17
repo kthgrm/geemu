@@ -96,7 +96,11 @@ include 'includes/head.php';
                                         <h5 class="card-title mb-1"><?php echo htmlspecialchars($game['title']); ?></h5>
                                         <span class="fw-bold">₱<?php echo number_format((float)$game['price'], 2); ?></span>
                                         <div class="mt-auto d-flex justify-content-end align-items-center gap-1">
-                                            <a href="cart-add.php?id=<?php echo urlencode($game['id']); ?>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                                            <form action="cart-add.php" method="post" class="m-0">
+                                                <button type="submit" name="game_id" value="<?php echo htmlspecialchars($game['id']); ?>" class="btn btn-danger btn-sm">
+                                                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

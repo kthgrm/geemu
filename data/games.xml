@@ -153,4 +153,76 @@
     <tag>Action,RPG,Fantasy</tag>
     <category>PlayStation 5</category>
   </game>
+  <game id="18">
+    <title>Super Smash Bros. Ultimate</title>
+    <description>Join iconic characters from various games in this fast-paced, action-packed brawler!</description>
+    <price>4999</price>
+    <quantity>200</quantity>
+    <category>Nintendo Switch</category>
+    <tag>Fighting,Multiplayer,Action</tag>
+    <image>game_68285b482e56f7.58463472.jpg</image>
+  </game>
+  <game id="19">
+    <title>Halo Infinite</title>
+    <price>3499</price>
+    <image>halo-infinite.png</image>
+    <description>Fight for humanity’s survival in this action-packed first-person shooter.</description>
+    <quantity>150</quantity>
+    <tag>Action, Shooter, Sci-Fi</tag>
+    <category>Xbox One</category>
+  </game>
+  <game id="20">
+    <title>Forza Horizon 4</title>
+    <price>2499</price>
+    <image>fh4.jpg</image>
+    <description>Race across the UK in this open-world racing game with stunning visuals.</description>
+    <quantity>120</quantity>
+    <tag>Racing, Open-World, Action</tag>
+    <category>Xbox One</category>
+  </game>
+  <game id="21">
+    <title>Sunset Overdrive</title>
+    <price>1999</price>
+    <image>sunset-overdrive.jpg</image>
+    <description>Battle mutants in a vibrant, chaotic open-world city in this Xbox One exclusive.</description>
+    <quantity>100</quantity>
+    <tag>Action, Shooter, Open-World</tag>
+    <category>Xbox One</category>
+  </game>
+  <game id="22">
+    <title>Gears 5</title>
+    <price>2999</price>
+    <image>gears5.jpg</image>
+    <description>Battle through intense action in this third-person shooter from the Gears franchise.</description>
+    <quantity>100</quantity>
+    <tag>Action, Shooter, Sci-Fi</tag>
+    <category>Xbox One</category>
+  </game>
+  <game id="23">
+    <title>Forza Motorsport</title>
+    <price>4999</price>
+    <image>forza-motorsport.jpg</image>
+    <description>Experience next-gen racing realism with stunning visuals and physics, exclusive to Xbox Series X.</description>
+    <quantity>120</quantity>
+    <tag>Racing, Simulation, Exclusive</tag>
+    <category>Xbox Series X</category>
+  </game>
+  <game id="24">
+    <title>Starfield</title>
+    <price>4999</price>
+    <image>starfield.jpg</image>
+    <description>Embark on an epic space adventure in this Xbox Series X exclusive RPG from Bethesda.</description>
+    <quantity>100</quantity>
+    <tag>RPG, Sci-Fi, Exclusive</tag>
+    <category>Xbox Series X</category>
+  </game>
+  <game id="25">
+    <title>Senua's Saga: Hellblade II</title>
+    <price>5299</price>
+    <image>senua.jpg</image>
+    <description>Join Senua on a haunting journey through a dark and emotional Norse mythology-inspired world.</description>
+    <quantity>110</quantity>
+    <tag>Action, Adventure, Psychological</tag>
+    <category>Xbox Series X</category>
+  </game>
 </games>
