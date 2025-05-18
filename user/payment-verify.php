@@ -19,7 +19,7 @@ if (isset($_SESSION['refNum'])) {
     $pay = $data['data'];
     $paymentStatus = $pay['attributes']['status'];
     $paymentRefNum = $pay['attributes']['reference_number'];
-    $total = $pay['attributes']['amount'];
+    $total = number_format($pay['attributes']['amount'] / 100, 2, '.', '');
 
     if ($paymentStatus == 'paid' && $paymentRefNum == $refNum) {
         $xml = new DOMDocument();
@@ -40,22 +40,54 @@ if (isset($_SESSION['refNum'])) {
         $payment->setAttribute('amount', $total);
         $payment->setAttribute('date', date('Y-m-d H:i:s'));
 
-        $paymentParent->appendChild($payment);
-        $xml->save('../data/payments.xml');
-
         $cartxml = new DOMDocument();
         $cartxml->load('../data/carts.xml');
         $carts = $cartxml->getElementsByTagName('cart');
         $cartParent = $cartxml->getElementsByTagName('carts')[0];
+
+        // Update games.xml stock
+        $gamesXml = new DOMDocument();
+        $gamesXml->load('../data/games.xml');
+        $games = $gamesXml->getElementsByTagName('game');
+
         foreach ($carts as $cart) {
             $cartId = $cart->getAttribute('userId');
             if ($cartId == $id) {
+                $items = $cart->getElementsByTagName('item');
+                foreach ($items as $item) {
+                    $gameId = $item->getAttribute('gameId');
+                    $qtyBought = (int)$item->getAttribute('quantity');
 
+                    // Save item in payment node
+                    $itemNode = $xml->createElement('item');
+                    $itemNode->setAttribute('gameId', $gameId);
+                    $itemNode->setAttribute('quantity', $qtyBought);
+                    $payment->appendChild($itemNode);
+
+                    // Find the game in games.xml and update quantity
+                    foreach ($games as $game) {
+                        if ($game->getAttribute('id') == $gameId) {
+                            $qtyNode = $game->getElementsByTagName('quantity')[0];
+                            $currentStock = (int)$qtyNode->nodeValue;
+                            $newStock = max(0, $currentStock - $qtyBought);
+                            $qtyNode->nodeValue = $newStock;
+                            break;
+                        }
+                    }
+                }
+                // Save updated games.xml after all items processed
+                $gamesXml->save('../data/games.xml');
+
+                // Remove cart after updating stock
                 $cartxml->documentElement->removeChild($cart);
                 $cartxml->save('../data/carts.xml');
                 break;
             }
         }
+
+        $paymentParent->appendChild($payment);
+        $xml->save('../data/payments.xml');
+
         echo "<script>alert('Payment Successful.'); window.location.href='cart.php';</script>";
     } else {
         echo "<script>alert('Payment Failed.'); window.location.href='cart.php';</script>";

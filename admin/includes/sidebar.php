@@ -29,6 +29,11 @@
                             <i class="fa-solid fa-credit-card"></i> Payments
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/geemu/admin/reports.php">
+                            <i class="fa-solid fa-chart-bar"></i> Reports
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

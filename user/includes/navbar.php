@@ -10,6 +10,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="shop.php"><i class="fa-solid fa-gamepad"></i> Shop</a></li>
                 <li class="nav-item"><a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="purchases.php"><i class="fa-solid fa-box"></i> Purchases</a></li>
                 <li class="nav-item">
                     <form method="POST" class="ms-auto" action="">
                         <button type="submit" class="btn btn-outline-light" name="logout">

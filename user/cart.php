@@ -202,6 +202,11 @@ if (isset($_POST['remove_game_id'])) {
         document.getElementById('summaryTotal').innerText = summaryTotal.toLocaleString(undefined, {
             minimumFractionDigits: 2
         });
+
+        const cartTotalInput = document.querySelector('input[name="cartTotal"]');
+        if (cartTotalInput) {
+            cartTotalInput.value = summaryTotal.toFixed(2);
+        }
     }
 </script>
 <?php include 'includes/foot.php'; ?>

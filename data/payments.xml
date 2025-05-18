@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <payments>
-    <payment id="3" userId="14" amount="899700" date="2025-05-17 13:33:05"/>
+    <payment id="3" userId="14" amount="8997.00" date="2025-05-17 13:33:05">
+        <item gameId="1" quantity="3"/>
+    </payment>
+    <payment id="4" userId="14" amount="2999.00" date="2025-05-18 04:45:31">
+        <item gameId="5" quantity="1"/>
+    </payment>
+    <payment id="5" userId="14" amount="8597.00" date="2025-05-18 04:56:48">
+        <item gameId="5" quantity="2"/>
+        <item gameId="3" quantity="1"/>
+    </payment>
 </payments>
