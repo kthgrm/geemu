@@ -43,6 +43,7 @@ if (isset($_POST['remove_game_id'])) {
                     $carts = $xml->getElementsByTagName('cart');
                     $found = false;
                     $cartTotal = 0;
+                    $hasStockIssue = false;
                     foreach ($carts as $cart) {
                         if ($cart->getAttribute('userId') == $id) {
                             $items = $cart->getElementsByTagName('item');
@@ -70,9 +71,14 @@ if (isset($_POST['remove_game_id'])) {
                                             $gameName = $game->getElementsByTagName('title')[0]->nodeValue;
                                             $gamePrice = $game->getElementsByTagName('price')[0]->nodeValue;
                                             $gameImage = $game->getElementsByTagName('image')[0]->nodeValue;
+                                            $availableQty = $game->getElementsByTagName('quantity')[0]->nodeValue;
                                             break;
                                         }
                                     }
+                                    if ((int)$quantity > (int)$availableQty) {
+                                        $hasStockIssue = true;
+                                    }
+
                                     $lineTotal = $gamePrice * $quantity;
                                     $cartTotal += $lineTotal;
                     ?>
@@ -99,6 +105,8 @@ if (isset($_POST['remove_game_id'])) {
                                                     name="quantity[]"
                                                     value="<?php echo (int)$quantity; ?>"
                                                     min="1"
+                                                    max="<?php echo (int)$availableQty; ?>"
+                                                    data-max="<?php echo (int)$availableQty; ?>"
                                                     style="width:45px; -moz-appearance: textfield;"
                                                     readonly>
                                                 <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(this, 1)"><i class="fa fa-plus"></i></button>
@@ -155,7 +163,12 @@ if (isset($_POST['remove_game_id'])) {
                     </div>
                     <form method="post" action="checkout.php">
                         <input type="hidden" name="cartTotal" value="<?php echo htmlspecialchars($cartTotal); ?>">
-                        <button class="btn btn-warning w-100 fw-bold py-2 fs-5" name="btnCheckout" type="submit">Proceed to Checkout</button>
+                        <button class="btn btn-warning w-100 fw-bold py-2 fs-5" name="btnCheckout" type="submit" <?php echo $hasStockIssue ? 'disabled' : ''; ?>>
+                            Proceed to Checkout
+                        </button>
+                        <?php if ($hasStockIssue): ?>
+                            <p class="text-danger text-center mt-2">Some items exceed available stock. Please adjust quantities before checking out.</p>
+                        <?php endif; ?>
                     </form>
                 </div>
             </div>
@@ -166,8 +179,15 @@ if (isset($_POST['remove_game_id'])) {
     function changeQuantity(btn, delta) {
         const input = btn.parentNode.querySelector('input[type=number]');
         let val = parseInt(input.value) || 1;
+        const max = parseInt(input.dataset.max) || Infinity;
+
         val += delta;
         if (val < 1) val = 1;
+        if (val > max) {
+            alert("Quantity exceeds available stock.");
+            val = max;
+        }
+
         input.value = val;
         updateCartTotal(input);
 
@@ -180,7 +200,6 @@ if (isset($_POST['remove_game_id'])) {
         let http = new XMLHttpRequest();
         http.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                // Handle the response if needed
                 console.log(this.responseText);
             }
         };

@@ -13,7 +13,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="user/shop.php"><i class="fa-solid fa-gamepad"></i> Shop</a></li>
-                <li class="nav-item"><a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="user/cart.php"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.php"><i class="fa-solid fa-user"></i> Login/Signup</a></li>
             </ul>
         </div>

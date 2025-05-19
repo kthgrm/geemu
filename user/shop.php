@@ -56,7 +56,12 @@ include 'includes/head.php';
                     $price = $game->getElementsByTagName('price')[0]->nodeValue;
                     $image = $game->getElementsByTagName('image')[0]->nodeValue;
                     $category = $game->getElementsByTagName('category')[0]->nodeValue;
+                    $quantity = $game->getElementsByTagName('quantity')[0]->nodeValue;
                     $tag = $game->getElementsByTagName('tag')->length > 0 ? $game->getElementsByTagName('tag')[0]->nodeValue : '';
+
+                    if ((int)$quantity < 1) {
+                        continue;
+                    }
 
                     if (
                         $search &&
@@ -66,6 +71,7 @@ include 'includes/head.php';
                     ) {
                         continue;
                     }
+
                     $filteredGames[] = [
                         'id' => $id,
                         'title' => $title,

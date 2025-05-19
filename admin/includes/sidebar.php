@@ -5,32 +5,32 @@
             <nav>
                 <ul class=" nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/dashboard.php">
+                        <a class="nav-link text-white" href="dashboard.php">
                             <i class="fa-solid fa-gauge"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/categories.php">
+                        <a class="nav-link text-white" href="categories.php">
                             <i class="fa-solid fa-list"></i> Categories
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/products.php">
+                        <a class="nav-link text-white" href="products.php">
                             <i class="fa-solid fa-box"></i> Products
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/users.php">
+                        <a class="nav-link text-white" href="users.php">
                             <i class="fa-solid fa-user"></i> Users
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/payments.php">
+                        <a class="nav-link text-white" href="payments.php">
                             <i class="fa-solid fa-credit-card"></i> Payments
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/geemu/admin/reports.php">
+                        <a class="nav-link text-white" href="reports.php">
                             <i class="fa-solid fa-chart-bar"></i> Reports
                         </a>
                     </li>
